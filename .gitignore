@@ -4,3 +4,4 @@ dist
 .rpt2_cache
 lib
 public
+lerna-debug.log
