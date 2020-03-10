@@ -1,9 +1,10 @@
 import React from 'react';
-import {Test} from 'input';
+import { Test, Garble } from 'input';
 
 function App() {
   return (
     <div className="App">
+        <Garble />
         <Test />
     </div>
   );

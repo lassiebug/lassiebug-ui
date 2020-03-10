@@ -9,7 +9,8 @@
   "types": "./lib/index.d.ts",
   "scripts": {
     "tsc": "tsc",
-    "build":"rollup -c"
+    "start": "tsc --watch",
+    "watch": "tsc --watch"
   },
   "dependencies": {},
   "peerDependencies": {
