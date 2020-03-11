@@ -1,5 +1,5 @@
 {
-  "name": "input",
+  "name": "lassiebug-ui-input",
   "version": "0.0.1",
   "private": false,
   "files": [
@@ -27,5 +27,6 @@
     "rollup-plugin-typescript2": "^0.26.0",
     "tslib": "1.9.3",
     "typescript": "3.4.1"
-  }
+  },
+  "gitHead": "8c82806439a26a3198c92ee4abe61fad6363e24d"
 }
