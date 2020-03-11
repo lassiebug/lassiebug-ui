@@ -1,6 +1,6 @@
 {
   "name": "input",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": false,
   "files": [
     "lib"
@@ -12,7 +12,6 @@
     "start": "tsc --watch",
     "watch": "tsc --watch"
   },
-  "dependencies": {},
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
     "react-dom": ">= 16.8.0 < 17"
