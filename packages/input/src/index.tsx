@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Test = () => (
-    <h1>This is a test not</h1>
+    <h1>test test test</h1>
 );
  
 export const Garble = () => (
