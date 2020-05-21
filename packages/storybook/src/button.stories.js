@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@lassiebug/ui-input';
 
 export default { 
-    title: 'Buttons',
+    title: '@lassiebug/input',
     component: Button
 }
 
