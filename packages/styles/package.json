@@ -1,17 +1,17 @@
 {
-  "name": "@lassiebug/ui-input",
-  "version": "0.0.3",
-  "private": false,
-  "files": [
-    "lib"
-  ],
+  "name": "@lassiebug/styles",
+  "version": "0.0.1",
+  "description": "",
   "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "types":"./lib/index.d.ts",
   "scripts": {
     "tsc": "tsc",
     "start": "tsc --watch",
     "watch": "tsc --watch"
   },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "89561102b9decc76c32edf53463450a198556cc9",
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
     "react-dom": ">= 16.8.0 < 17"
@@ -22,16 +22,9 @@
     "@types/react": "16.9.13",
     "@types/react-dom": "16.9.4",
     "react": "16.8.6",
-    "react-dom": "16.8.6",
     "rollup": "^2.0.3",
-    "rollup-plugin-typescript2": "^0.26.0",
     "tslib": "1.9.3",
-    "typescript": "3.4.1"
-  },
-  "gitHead": "89561102b9decc76c32edf53463450a198556cc9",
-  "dependencies": {
-    "@types/styled-components": "^5.0.1",
-    "styled-components": "^5.0.1",
-    "@lassiebug/ui-providers":"0.0.3"
+    "typescript": "3.4.1",
+    "styled-components": "^5.0.1"
   }
 }

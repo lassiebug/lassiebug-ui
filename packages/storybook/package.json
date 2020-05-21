@@ -3,12 +3,19 @@
     "version": "0.0.3",
     "description": "",
     "main": "index.js",
+    "private": false,
     "devDependencies": {
         "@babel/core": "^7.8.7",
         "@storybook/react": "^5.3.14",
         "babel-loader": "^8.0.6"
     },
     "scripts": {
-        "storybook": "start-storybook"
+        "start": "start-storybook"
+    },
+    "gitHead": "89561102b9decc76c32edf53463450a198556cc9",
+    "dependencies": {
+        "@lassiebug/ui-input": "^0.0.3",
+        "@lassiebug/ui-providers":"0.0.3",
+        "@lassiebug/styles":"0.0.1"
     }
 }

@@ -1,18 +1,6 @@
 import React from 'react';
 import { Button } from '@storybook/react/demo';
+import { Test, Garble } from '@lassiebug/ui-input';
 
-export default { title: 'Button' };
+export default { title: 'Lassie bug' };
 
-export const withText = () => <Button>Hello Button</Button>;
-
-export const withEmoji = () => (
-  <Button>
-    <span role="img" aria-label="so cool">
-        wowowowowowowowwowowowowowow
-    </span>
-  </Button>
-);
-
-export const normal = () => (
-    <input type="button" value="bland af"/>
-)
