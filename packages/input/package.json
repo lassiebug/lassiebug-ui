@@ -10,7 +10,8 @@
   "scripts": {
     "tsc": "tsc",
     "start": "tsc --watch",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "prepublish":"tsc"
   },
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
