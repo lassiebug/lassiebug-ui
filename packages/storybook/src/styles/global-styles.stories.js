@@ -68,7 +68,33 @@ export const typeography = () => (
         <h5>h5</h5>
         <h6>h6</h6>
         <h7>h7</h7>
-        <p>the quick brown fox jumps over the lazy dog</p>
+        <p>
+            Doloremque quos ut enim dolorum quas sit eligendi. Quia deserunt
+            perferendis cumque rerum quibusdam autem. Sint ad consequatur
+            reiciendis exercitationem earum ducimus minima. Ipsa eaque porro
+            repellendus occaecati cupiditate expedita enim perspiciatis.
+            Doloribus consequuntur minus accusamus suscipit tempora eveniet at.
+        </p>
+        <p>
+            Adipisci sed est soluta alias temporibus et. Dolorum eum cupiditate
+            sunt et reprehenderit ut. Saepe quis maxime et odit voluptates qui
+            unde sapiente.
+        </p>
+        <p>
+            Et aperiam eos aut sint non accusamus distinctio sed. Debitis qui
+            velit illo nihil nisi aut ipsa dolor. Est sed temporibus ratione
+            fugiat tempora ratione quos fuga.
+        </p>
+        <p>
+            Et officia esse sed porro qui. Porro ut expedita sed. Repellat qui
+            rerum rerum corrupti.
+        </p>
+        <p>
+            Illum omnis iusto expedita iure nemo sunt. Tenetur delectus impedit
+            sapiente est aut officia. Aut ex possimus et id ratione. Quos
+            voluptatibus eos esse est modi voluptas tenetur. Explicabo
+            dignissimos sint placeat incidunt. Nemo beatae qui provident.
+        </p>
         <Typeography />
     </div>
 );
