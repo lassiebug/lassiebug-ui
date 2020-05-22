@@ -21,8 +21,8 @@
         "tsc": "lerna run tsc --stream",
         "watch": "lerna run watch --stream",
         "lint": "npm run lint:eslint .",
-        "lint:eslint": "eslint --ext .ts --no-error-on-unmatched-pattern",
-        "lint:eslint:fix": "eslint --ext .ts --no-error-on-unmatched-pattern --fix",
+        "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx --no-error-on-unmatched-pattern .",
+        "lint:eslint:fix": "eslint --ext .ts,.tsx,.js,.jsx --no-error-on-unmatched-pattern --fix .",
         "typecheck": "tsc --noEmit"
     }
 }
