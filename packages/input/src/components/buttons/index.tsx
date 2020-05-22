@@ -26,7 +26,7 @@ const StyledButton = styled.button`
     }};
     background-color: ${(props: ButtonProps) => {
         if (props.flat) {
-            return 'none';
+            return 'var(--transparent)';
         } else {
             return get_color(props.type);
         }
@@ -38,10 +38,22 @@ const StyledButton = styled.button`
     color: var(--black);
 
     cursor: pointer;
-    transition: var(--shadow-transition), transform 0.2s;
+    transition: var(--shadow-transition), transform 0.2s, color 0.5s,
+        background-color 0.2s;
 
+    &:target,
+    &:active {
+        transform: translate3d(0, 2px, 0);
+    }
     ${(props: ButtonProps) => {
-        if (props.flat) return 'none';
+        if (props.flat)
+            return `
+            color:var(--text);
+            &:hover {
+                color:var(--text-contrast);
+                background-color:${get_color(props.type)};
+            }
+        `;
         return `
             box-shadow:var(--shadow-00);
             &:hover {
@@ -50,7 +62,6 @@ const StyledButton = styled.button`
 
             &:target, &:active {
                 box-shadow:var(--shadow-00);
-                transform:translate3d(0, 2px, 0);
             }
         `;
     }};
