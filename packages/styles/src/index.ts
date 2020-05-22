@@ -69,4 +69,19 @@ const Shadows = createGlobalStyle`
     }
 `;
 
-export { Colors, Typeography, Shadows };
+const Borders = createGlobalStyle`
+    :root {
+        --corner:5px;
+    }
+`;
+
+const Padding = createGlobalStyle`
+    :root {
+        --padding-00:0rem;
+        --padding-05:.5rem;
+        --padding-10:1rem;
+        --padding-20:2rem;
+    }
+`;
+
+export { Colors, Typeography, Shadows, Borders, Padding };
