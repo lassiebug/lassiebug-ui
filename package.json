@@ -20,7 +20,7 @@
         "start": "lerna run start --stream --parallel",
         "tsc": "lerna run tsc --stream",
         "watch": "lerna run watch --stream",
-        "lint": "npm run typecheck && npm run lint:eslint .",
+        "lint": "npm run lint:eslint .",
         "lint:eslint": "eslint --ext .ts --no-error-on-unmatched-pattern",
         "lint:eslint:fix": "eslint --ext .ts --no-error-on-unmatched-pattern --fix",
         "typecheck": "tsc --noEmit"
