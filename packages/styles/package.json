@@ -1,5 +1,6 @@
 {
   "name": "@lassiebug/styles",
+  "private":false,
   "version": "0.0.4",
   "description": "",
   "main": "./lib/index.js",
@@ -11,7 +12,7 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "89561102b9decc76c32edf53463450a198556cc9",
+  "gitHead": "7a80665a514da653d08cebc8f0d7313bf68ef41e",
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
     "react-dom": ">= 16.8.0 < 17"

@@ -28,7 +28,7 @@
     "tslib": "1.9.3",
     "typescript": "3.4.1"
   },
-  "gitHead": "89561102b9decc76c32edf53463450a198556cc9",
+  "gitHead": "7a80665a514da653d08cebc8f0d7313bf68ef41e",
   "dependencies": {
     "@lassiebug/ui-providers": "^0.0.4",
     "@types/styled-components": "^5.0.1",
