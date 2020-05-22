@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@lassiebug/ui-input';
 
 export default { 
-    title: '@lassiebug/input',
+    title: '@lassiebug/input/Button',
     component: Button
 }
 
@@ -48,7 +48,7 @@ export const flat = () => {
 
 export const colors = () => {
     return (
-        <div>
+        <div style={{ display:'flex', justifyContent:'space-around' }}>
             <Button
                 value={testText}
                 type='primary'

@@ -1,6 +1,6 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { Colors, Typeography } from '@lassiebug/styles';
+import { Colors, Typeography, Shadows } from '@lassiebug/styles';
 
 addDecorator(fn => {
     return (
@@ -8,6 +8,7 @@ addDecorator(fn => {
             {fn()}
             <Colors/>
             <Typeography/>
+            <Shadows/>
         </>
     )
 })

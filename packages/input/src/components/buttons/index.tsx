@@ -1,88 +1,71 @@
-import React, { 
-    FC, 
-    InputHTMLAttributes,
-} from 'react';
-
-import { useTheme, Theme } from '@lassiebug/ui-providers';
-
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 
 type Sizes = 'sm' | 'md' | 'lg';
 type Types = 'primary' | 'danger' | 'success' | 'warning';
-interface ButtonProps extends InputHTMLAttributes<HTMLInputElement>{
-    readonly Tag?:string;
-    readonly key?:string;
-    sizeType:Sizes;
-    flat?:boolean;
+
+interface ButtonProps {
+    size:Sizes;
     type:Types;
+    value:string;
+    flat:boolean;
 }
 
-const input = ({sizeType,flat, type}:ButtonProps, theme:Theme) => {
-    let padding:number = 0;
-    let fontSize:number = 0;;
-
-    let background = 'red';
-    let color = theme.textContrast;
-    let border = 'none';
-
-    switch(sizeType) {
-        case 'sm':
-            padding = .5;
-            fontSize = 1;
-            break;
-        case 'md':
-        default:
-            padding = .5;
-            fontSize = 1.3;
-            break;
-        case 'lg':
-            padding = 1;
-            fontSize = 1.5;
-            break;
-    }
-
-    switch(type) {
-        case 'primary':
-        default:
-            background = theme.primary;
-            break;
-        case 'warning':
-            background = theme.warning;
-            break;
-        case 'danger':
-            background = theme.danger;
-            break;
-        case 'success':
-            background = theme.success;
-            break;
-    }
-
-    if(flat) {
-        color = background;
-        border = `3px solid ${background}`;
-        background = 'none';
-    }
-
-    return styled.input`
-        padding:${padding}rem ${padding + .5}rem;
-        font-size:${fontSize}rem;
-        border:${border};
-        background:${background};
-        border-radius:5px;
-        color:${color};
-        cursor:pointer;
-    `;
+const get_color = (color?:Types) => {
+    if(!color)return 'var(--primary)';
+    return `var(--${color})`;
 }
 
-export const Button:FC<ButtonProps> = (props) => {
-    const { theme } = useTheme();
-    const Input = input(props, theme);
-    console.log('got theme??', theme);
+const StyledButton = styled.button`
+
+    border:${(props:ButtonProps) => {
+        if(props.flat) {
+            return `2px solid ${get_color(props.type)}`
+        } else {
+            return 'none';
+        }
+    }};
+    background-color:${(props:ButtonProps) => {
+        if(props.flat) {
+            return 'none';
+        } else {
+            return get_color(props.type);
+        }
+
+    }};
+
+    padding:.5rem 1rem;
+    border-radius:5px;
+
+    color:var(--black);
+
+    cursor: pointer;
+    transition:var(--shadow-transition), transform .2s;
+
+    ${(props:ButtonProps) => {
+        if(props.flat)return 'none';
+        return `
+            box-shadow:var(--shadow-00);
+            &:hover {
+                box-shadow:var(--shadow-10);
+            }
+
+            &:target, &:active {
+                box-shadow:var(--shadow-00);
+                transform:translate3d(0, 2px, 0);
+            }
+        `;
+    }};
+
+`;
+
+const Button:FC<ButtonProps> = ({ children, ...props }) => {
     return (
-        <Input 
-            {...props } 
-            type="button"
-        />
-        );
+        <StyledButton {...(props as any)}>
+            { props.value }
+        </StyledButton>
+    )
 }
+
+export default Button;
