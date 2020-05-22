@@ -4,9 +4,6 @@ import React, { FC } from 'react';
 const Colors = createGlobalStyle` 
     font-size:20px;
     :root {
-        --background:#292f38;
-        --foreground: #c3c7d1;
-        --content:#353940;
 
         --black:#282c34;
         --red:#ed254e;
@@ -16,6 +13,11 @@ const Colors = createGlobalStyle`
         --magenta:#c74ded;
         --cyan:#00c1e4;
         --white:#dcdfe4;
+
+        --background:#292f38;
+        --foreground: #c3c7d1;
+        --content:#353940;
+        --content-contrast:var(--black);
 
         --transparent:rgba(0, 0, 0, 0);
 
