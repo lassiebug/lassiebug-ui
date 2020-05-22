@@ -12,7 +12,7 @@
     "scripts": {
         "start": "start-storybook"
     },
-    "gitHead": "7a80665a514da653d08cebc8f0d7313bf68ef41e",
+    "gitHead": "6b357cc01b1a081ff98ca7493baf1ee49c9088d1",
     "dependencies": {
         "@lassiebug/card": "^0.4.1",
         "@lassiebug/styles": "^0.4.0",

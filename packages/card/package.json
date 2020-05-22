@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "start": "tsc --watch",
     "watch": "tsc --watch",
-    "prepare": "tsc"
+    "prepublish": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -28,5 +28,6 @@
     "tslib": "1.9.3",
     "typescript": "3.4.1"
   },
-  "description": ""
+  "description": "",
+  "gitHead": "6b357cc01b1a081ff98ca7493baf1ee49c9088d1"
 }

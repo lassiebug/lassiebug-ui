@@ -29,7 +29,7 @@
     "tslib": "1.9.3",
     "typescript": "3.4.1"
   },
-  "gitHead": "7a80665a514da653d08cebc8f0d7313bf68ef41e",
+  "gitHead": "6b357cc01b1a081ff98ca7493baf1ee49c9088d1",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
