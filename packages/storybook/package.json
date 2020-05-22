@@ -1,6 +1,6 @@
 {
     "name": "@lassiebug/storybook",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "",
     "main": "index.js",
     "private": false,
@@ -14,9 +14,9 @@
     },
     "gitHead": "7a80665a514da653d08cebc8f0d7313bf68ef41e",
     "dependencies": {
-        "@lassiebug/styles": "^0.2.0",
-        "@lassiebug/ui-input": "^0.2.0",
-        "@lassiebug/ui-providers": "^0.2.0",
+        "@lassiebug/styles": "^0.3.0",
+        "@lassiebug/ui-input": "^0.3.0",
+        "@lassiebug/ui-providers": "^0.3.0",
         "@storybook/addons": "^5.3.18",
         "@storybook/theming": "^5.3.18"
     }
