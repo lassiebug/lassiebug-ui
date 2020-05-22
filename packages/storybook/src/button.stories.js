@@ -8,14 +8,9 @@ export default {
 
 const testText = 'Hello World';
 
-export const button = () => (
+export const normal = () => (
     <div>
-        <p>sm</p>
-        <Button value={testText} sizeType="sm" />
-        <p>md</p>
-        <Button value={testText} sizeType="md" />
-        <p>lg</p>
-        <Button value={testText} sizeType="lg" />
+        <Button value={testText} />
     </div>
 );
 
