@@ -8,7 +8,7 @@ interface CardProps {
     height?: string;
     img?: string;
     flat?: boolean;
-    hoverable: boolean;
+    hoverable?: boolean;
 }
 
 const Styles = styled.div`
