@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@lassiebug/ui-input';
+import { Button, Checkbox } from '@lassiebug/ui-input';
 
 export default {
     title: '@lassiebug/input/Button',
@@ -23,11 +23,21 @@ export const flat = () => (
     </div>
 );
 
-export const colors = () => (
-    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-        <Button value={testText} type="primary" />
-        <Button value={testText} type="success" />
-        <Button value={testText} type="warning" />
-        <Button value={testText} type="danger" />
-    </div>
-);
+export const colors = () => {
+    const [flat, setFlat] = React.useState(false);
+    return (
+        <>
+            <Checkbox
+                checked={flat}
+                onChange={() => setFlat(!flat)}
+                label="Flat"
+            />
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <Button value={testText} type="primary" flat={flat} />
+                <Button value={testText} type="success" flat={flat} />
+                <Button value={testText} type="warning" flat={flat} />
+                <Button value={testText} type="danger" flat={flat} />
+            </div>
+        </>
+    );
+};
