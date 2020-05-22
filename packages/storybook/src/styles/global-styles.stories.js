@@ -21,7 +21,7 @@ const Grid = ({ children }) => (
     <div
         style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
             gridGap: 'var(--padding-05)',
         }}
     >
