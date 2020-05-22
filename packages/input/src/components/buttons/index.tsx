@@ -56,8 +56,8 @@ const StyledButton = styled.button`
     }};
 `;
 
-const Button: FC<ButtonProps> = ({ children, ...props }) => {
-    return <StyledButton {...(props as any)}>{props.value}</StyledButton>;
-};
+const Button: FC<ButtonProps> = ({ children, ...props }) => (
+    <StyledButton {...(props as any)}>{props.value}</StyledButton>
+);
 
 export default Button;
