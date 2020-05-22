@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import React, { FC } from 'react';
 
 const Colors = createGlobalStyle` 
     font-size:20px;
@@ -84,4 +85,17 @@ const Padding = createGlobalStyle`
     }
 `;
 
+const Root = () => (
+    <>
+        <Colors />
+        <Typeography />
+        <Shadows />
+        <Borders />
+        <Padding />
+    </>
+);
+
 export { Colors, Typeography, Shadows, Borders, Padding };
+
+export default Root;
+

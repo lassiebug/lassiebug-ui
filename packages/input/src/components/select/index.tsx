@@ -51,7 +51,7 @@ const StyledOptions = styled.ul`
     background-color: var(--content);
     margin: 0;
 
-    padding:var(--padding-10);
+    padding: var(--padding-10);
 `;
 
 interface Props {
