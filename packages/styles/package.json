@@ -1,6 +1,6 @@
 {
   "name": "@lassiebug/styles",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "files": [
     "lib"
@@ -32,6 +32,5 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {},
   "description": ""
 }

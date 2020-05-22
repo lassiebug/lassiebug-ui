@@ -1,6 +1,6 @@
 {
   "name": "@lassiebug/ui-input",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "files": [
     "lib"
@@ -30,7 +30,7 @@
   },
   "gitHead": "7a80665a514da653d08cebc8f0d7313bf68ef41e",
   "dependencies": {
-    "@lassiebug/ui-providers": "^0.0.4",
+    "@lassiebug/ui-providers": "^0.0.5",
     "@types/styled-components": "^5.0.1",
     "styled-components": "^5.0.1"
   }
