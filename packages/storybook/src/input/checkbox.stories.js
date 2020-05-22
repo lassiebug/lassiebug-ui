@@ -8,5 +8,11 @@ export default {
 
 export const normal = () => {
     const [active, setActive] = React.useState(false);
-    return <Checkbox checked={active} onChange={() => setActive(!active)} />;
+    return (
+        <Checkbox
+            checked={active}
+            onChange={() => setActive(!active)}
+            label="My Checkbox"
+        />
+    );
 };
