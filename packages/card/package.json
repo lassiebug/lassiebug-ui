@@ -1,0 +1,31 @@
+{
+  "name": "@lassiebug/card",
+  "version": "0.3.1",
+  "private": false,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "tsc --watch",
+    "watch": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">= 16.8.0 < 17",
+    "react-dom": ">= 16.8.0 < 17"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.11",
+    "@types/node": "11.13.0",
+    "@types/react": "16.9.13",
+    "@types/react-dom": "16.9.4",
+    "@types/styled-components": "^5.1.0",
+    "react": "16.8.6",
+    "rollup": "^2.0.3",
+    "styled-components": "^5.0.1",
+    "tslib": "1.9.3",
+    "typescript": "3.4.1"
+  },
+  "description": ""
+}
