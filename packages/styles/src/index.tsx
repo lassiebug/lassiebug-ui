@@ -17,7 +17,8 @@ const Colors = createGlobalStyle`
         --cyan:#00c1e4;
         --white:#dcdfe4;
 
-        --text:white;
+        --text:var(--white);
+        --text-contrast:var(--black);
 
         --primary:var(--blue);
         --secondary:var(--black);
