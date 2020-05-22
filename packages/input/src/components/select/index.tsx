@@ -35,6 +35,7 @@ const Wrapper = styled.div`
     label {
         user-select: none;
         cursor: pointer;
+        color: var(--text);
     }
 `;
 
@@ -50,8 +51,7 @@ const StyledOptions = styled.ul`
 
     background-color: var(--content);
     margin: 0;
-
-    padding: var(--padding-10);
+    padding: 0;
 `;
 
 interface Props {
@@ -85,10 +85,12 @@ const Select: FC<Props> = ({ children, label, onChange, items }) => {
         background: 'none',
         border: 'none',
         cursor: 'pointer',
+        color: 'var(--text)',
     });
 
     const optionsSpring = useSpring({
         height: on ? height : 0,
+        pointerEvents: on ? 'all' : 'none',
         overflow: 'hidden',
         width: '100%',
         position: 'absolute',
@@ -99,7 +101,6 @@ const Select: FC<Props> = ({ children, label, onChange, items }) => {
 
     return (
         <Wrapper>
-            <p>hello world</p>
             <HiddenSelect>{children}</HiddenSelect>
 
             <StyledSelect onClick={() => toggle(!on)}>
@@ -152,9 +153,9 @@ const StyledSelectItem = styled.li`
         border: none;
         margin: 0;
         text-align: left;
-        padding: var(--padding-10);
+        padding: var(--padding-05);
         width: 100%;
-        color: var(--text);
+        cursor: pointer;
     }
 `;
 
@@ -162,10 +163,16 @@ const SelectItem: FC<ItemProps> = ({ value, label, onClick, index }) => (
     <StyledSelectItem
         style={{
             backgroundColor:
-                value === index ? 'var(--content-contrast)' : 'var(--content)',
+                value === index ? 'var(--black)' : 'var(--content)',
         }}
     >
-        <button value={value} onClick={onClick}>
+        <button
+            value={value}
+            onClick={onClick}
+            style={{
+                color: value === index ? 'var(--primary)' : 'var(--text)',
+            }}
+        >
             {label}
         </button>
     </StyledSelectItem>
