@@ -26,7 +26,7 @@
     "rollup": "^2.0.3",
     "styled-components": "^5.0.1",
     "tslib": "1.9.3",
-    "typescript": "3.4.1"
+    "typescript": "3.8.3"
   },
   "description": "",
   "gitHead": "6b357cc01b1a081ff98ca7493baf1ee49c9088d1"
