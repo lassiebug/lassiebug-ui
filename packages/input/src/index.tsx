@@ -1,6 +1,3 @@
-import Button from "./components/buttons";
+import Button from './components/buttons';
 
-export {
-    Button
-}
-
+export { Button };

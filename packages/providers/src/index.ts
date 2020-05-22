@@ -1,8 +1,4 @@
 import { ThemeProvider, useTheme } from './providers/ThemeProvider';
-import {Theme} from './themes';
+import { Theme } from './themes';
 
-export {
-    ThemeProvider,
-    useTheme,
-    Theme,
-}
+export { ThemeProvider, useTheme, Theme };

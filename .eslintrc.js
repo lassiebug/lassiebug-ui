@@ -6,10 +6,7 @@ const prettierOptions = JSON.parse(
 );
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: [
-        'prettier',
-        'prettier/@typescript-eslint',
-    ],
+    extends: ['prettier', 'prettier/@typescript-eslint'],
     plugins: ['prettier', '@typescript-eslint'],
     env: {
         jest: true,

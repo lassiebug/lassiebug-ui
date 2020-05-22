@@ -68,8 +68,4 @@ const Shadows = createGlobalStyle`
     }
 `;
 
-export {
-    Colors,
-    Typeography,
-    Shadows
-}
+export { Colors, Typeography, Shadows };
