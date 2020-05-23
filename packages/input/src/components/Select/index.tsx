@@ -1,8 +1,4 @@
-import React, {
-    FC,
-    useState,
-    useEffect,
-} from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import useResizeObserver from 'use-resize-observer';
@@ -19,7 +15,7 @@ interface Item {
 interface Props {
     items: Item[];
     label?: string;
-    onChange?: (item: string, index: number) => void;
+    onChange?: (item: string, id: string) => void;
 }
 
 const HiddenSelect = styled.select`
@@ -68,13 +64,13 @@ const StyledOptions = styled.ul`
 const Select: FC<Props> = ({ children, label, onChange, items }) => {
     const [on, toggle] = useState(false);
     const [title, setTitle] = useState(label || '');
-    const [index, setIndex] = useState<number>();
+    const [selectedId, setSelectedId] = useState<string>();
 
     const { ref, height } = useResizeObserver<any>();
 
     useEffect(() => {
-        if (onChange && index !== undefined) onChange(title, index);
-    }, [index, title]);
+        if (onChange && selectedId !== undefined) onChange(title, selectedId);
+    }, [selectedId, title]);
 
     /* Start Animations */
     const borderSpring = useSpring({
@@ -125,10 +121,9 @@ const Select: FC<Props> = ({ children, label, onChange, items }) => {
                                 key={i}
                                 label={item.label}
                                 value={i}
-                                index={index}
                                 onClick={() => {
                                     setTitle(item.label);
-                                    setIndex(i);
+                                    setSelectedId(item.id);
                                 }}
                             />
                         ))}
