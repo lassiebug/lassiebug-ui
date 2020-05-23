@@ -54,7 +54,10 @@ const StyledLabel = styled.label`
 const Checkbox: FC<Props> = ({ className, checked, label, ...props }) => (
     <StyledLabel>
         <label data-testid="label">
-            <CheckboxContainer className={className} style={{ marginRight:label ? 'var(--padding-05)':'' }}>
+            <CheckboxContainer
+                className={className}
+                style={{ marginRight: label ? 'var(--padding-05)' : '' }}
+            >
                 <HiddenCheckbox
                     checked={checked}
                     {...(props as any)}
