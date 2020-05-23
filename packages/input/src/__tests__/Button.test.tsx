@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../components/buttons';
+import Button from '../components/Button';
 import { render, fireEvent } from '@testing-library/react';
 
 const click = jest.fn();
