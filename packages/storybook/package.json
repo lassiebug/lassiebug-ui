@@ -10,7 +10,7 @@
         "babel-loader": "^8.0.6"
     },
     "scripts": {
-        "start": "start-storybook"
+        "start": "start-storybook --port 4200 --quiet --ci"
     },
     "gitHead": "6b357cc01b1a081ff98ca7493baf1ee49c9088d1",
     "dependencies": {
