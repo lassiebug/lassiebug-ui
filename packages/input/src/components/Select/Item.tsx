@@ -45,4 +45,4 @@ const SelectItem: FC<ItemProps> = ({ value, label, onClick, index }) => (
     </StyledSelectItem>
 );
 
-export { SelectItem };
+export default SelectItem;
