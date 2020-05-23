@@ -11,6 +11,8 @@ import useResizeObserver from 'use-resize-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+import Item from './Item';
+
 const HiddenSelect = styled.select`
     opacity: 0;
     height: 0;
@@ -116,7 +118,7 @@ const Select: FC<Props> = ({ children, label, onChange, items }) => {
                 <div ref={ref}>
                     <StyledOptions onClick={() => toggle(false)}>
                         {items.map((item, i) => (
-                            <SelectItem
+                            <Item
                                 key={i}
                                 label={item}
                                 value={i}
@@ -134,49 +136,4 @@ const Select: FC<Props> = ({ children, label, onChange, items }) => {
     );
 };
 
-interface ItemProps extends LiHTMLAttributes<HTMLLIElement> {
-    label: string;
-    value: number;
-    onClick: (e: MouseEvent) => void;
-    index?: number;
-}
-
-const StyledSelectItem = styled.li`
-    border-bottom: 1px solid var(--line);
-    box-sizing: border-box;
-    &:last-child {
-        border-bottom: none;
-    }
-
-    button {
-        background: none;
-        border: none;
-        margin: 0;
-        text-align: left;
-        padding: var(--padding-05);
-        width: 100%;
-        cursor: pointer;
-    }
-`;
-
-const SelectItem: FC<ItemProps> = ({ value, label, onClick, index }) => (
-    <StyledSelectItem
-        style={{
-            backgroundColor:
-                value === index ? 'var(--black)' : 'var(--content)',
-        }}
-    >
-        <button
-            value={value}
-            onClick={onClick}
-            style={{
-                color: value === index ? 'var(--primary)' : 'var(--text)',
-            }}
-        >
-            {label}
-        </button>
-    </StyledSelectItem>
-);
-
 export default Select;
-export { SelectItem };
