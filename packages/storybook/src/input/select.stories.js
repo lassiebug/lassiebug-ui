@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from '@lassiebug/ui-input';
+import { Select } from '@lassiebug/input';
 
 export default {
     title: '@lassiebug/input/Select',

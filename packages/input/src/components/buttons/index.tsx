@@ -70,7 +70,7 @@ const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
     ...props
 }) => (
     <StyledButton {...props} data-testid="button">
-        {props.value}
+        { props.value }
     </StyledButton>
 );
 

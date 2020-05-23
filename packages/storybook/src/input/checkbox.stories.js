@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox } from '@lassiebug/ui-input';
+import { Checkbox } from '@lassiebug/input';
 
 export default {
     title: '@lassiebug/input/Checkbox',

@@ -16,7 +16,7 @@
     "dependencies": {
         "@lassiebug/card": "^0.4.2",
         "@lassiebug/styles": "^0.4.2",
-        "@lassiebug/ui-input": "^0.4.0",
+        "@lassiebug/input": "^0.4.2",
         "@lassiebug/ui-providers": "^0.4.0",
         "@storybook/addons": "^5.3.18",
         "@storybook/theming": "^5.3.18"
