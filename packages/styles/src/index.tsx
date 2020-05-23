@@ -101,4 +101,3 @@ const Root = () => (
 export { Colors, Typeography, Shadows, Borders, Padding };
 
 export default Root;
-

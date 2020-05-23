@@ -11,19 +11,22 @@
     "tsc": "tsc",
     "start": "tsc --watch",
     "watch": "tsc --watch",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "test":"react-scripts test"
   },
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
     "react-dom": ">= 16.8.0 < 17"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.0.4",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.0",
     "@types/react": "16.9.13",
     "@types/react-dom": "16.9.4",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-scripts": "^3.4.1",
     "rollup": "^2.0.3",
     "rollup-plugin-typescript2": "^0.26.0",
     "tslib": "1.9.3",

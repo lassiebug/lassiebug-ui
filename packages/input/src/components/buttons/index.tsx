@@ -1,14 +1,12 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-type Sizes = 'sm' | 'md' | 'lg';
 type Types = 'primary' | 'danger' | 'success' | 'warning';
 
 interface ButtonProps {
-    size: Sizes;
-    type: Types;
-    value: string;
-    flat: boolean;
+    type?: Types;
+    value?: string;
+    flat?: boolean;
 }
 
 const get_color = (color?: Types) => {
@@ -68,7 +66,9 @@ const StyledButton = styled.button`
 `;
 
 const Button: FC<ButtonProps> = ({ children, ...props }) => (
-    <StyledButton {...(props as any)}>{props.value}</StyledButton>
+    <StyledButton {...(props as any)} data-testid="button">
+        {props.value}
+    </StyledButton>
 );
 
 export default Button;
