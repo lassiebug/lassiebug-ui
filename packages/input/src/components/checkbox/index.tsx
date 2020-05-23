@@ -53,15 +53,21 @@ const StyledLabel = styled.label`
 
 const Checkbox: FC<Props> = ({ className, checked, label, ...props }) => (
     <StyledLabel>
-        <CheckboxContainer className={className}>
-            <HiddenCheckbox checked={checked} {...(props as any)} />
-            <StyledCheckbox checked={checked} {...props}>
-                <Icon viewBox="0 0 24 24">
-                    <polyline points="20 6 9 17 4 12" />
-                </Icon>
-            </StyledCheckbox>
-        </CheckboxContainer>
-        <span> {label}</span>
+        <label data-testid="label">
+            {label}
+            <CheckboxContainer className={className}>
+                <HiddenCheckbox
+                    checked={checked}
+                    {...(props as any)}
+                    data-testid="hidden-checkbox"
+                />
+                <StyledCheckbox checked={checked} {...props}>
+                    <Icon viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                    </Icon>
+                </StyledCheckbox>
+            </CheckboxContainer>
+        </label>
     </StyledLabel>
 );
 
