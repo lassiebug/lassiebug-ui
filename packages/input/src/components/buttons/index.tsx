@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 type Types = 'primary' | 'danger' | 'success' | 'warning';
@@ -65,8 +65,11 @@ const StyledButton = styled.button`
     }};
 `;
 
-const Button: FC<ButtonProps> = ({ children, ...props }) => (
-    <StyledButton {...(props as any)} data-testid="button">
+const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
+    children,
+    ...props
+}) => (
+    <StyledButton {...props} data-testid="button">
         {props.value}
     </StyledButton>
 );

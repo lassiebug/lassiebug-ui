@@ -2,6 +2,7 @@
     "name": "root",
     "private": true,
     "devDependencies": {
+        "@types/jest": "^25.2.3",
         "@typescript-eslint/eslint-plugin": "^2.31.0",
         "@typescript-eslint/parser": "^2.31.0",
         "eslint": "^7.0.0",

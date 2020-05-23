@@ -1,11 +1,17 @@
-import '@testing-library/jest-dom';
 import React from 'react';
 import Button from '../components/buttons';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
+
+const click = jest.fn();
+
 test('<Button>', () => {
-    const { debug, getByTestId } = render(
-        <Button flat value="hello" type="primary" />,
+    const { getByTestId } = render(
+        <Button flat value="hello" onClick={click} />,
     );
-    expect(true).toBeTruthy();
-    expect(getByTestId('button').innerHTML).toBe('hello');
+
+    const button = getByTestId('button');
+    expect(button.innerHTML).toBe('hello');
+
+    fireEvent.click(button);
+    expect(click).toHaveBeenCalledTimes(1);
 });
