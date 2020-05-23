@@ -1,5 +1,5 @@
-import Button from './components/buttons';
-import Checkbox from './components/checkbox';
-import Select from './components/select';
+import Button from './components/Button';
+import Checkbox from './components/Checkbox';
+import Select from './components/Select';
 
 export { Button, Checkbox, Select };
