@@ -12,7 +12,7 @@
     "start": "tsc --watch",
     "watch": "tsc --watch",
     "prepublish": "tsc",
-    "test":"react-scripts test"
+    "test": "react-scripts test --env=jsdom"
   },
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
@@ -27,10 +27,11 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "^3.4.1",
+    "resize-observer-polyfill": "^1.5.1",
     "rollup": "^2.0.3",
     "rollup-plugin-typescript2": "^0.26.0",
     "tslib": "1.9.3",
-    "typescript": "3.4.1"
+    "typescript": "3.8.3"
   },
   "gitHead": "6b357cc01b1a081ff98ca7493baf1ee49c9088d1",
   "dependencies": {
