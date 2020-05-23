@@ -11,7 +11,18 @@ import useResizeObserver from 'use-resize-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-import Item from './Item';
+import SelectItem from './Item';
+
+interface Item {
+    id: string;
+    label: string;
+}
+
+interface Props {
+    items: Item[];
+    label?: string;
+    onChange?: (item: string, index: number) => void;
+}
 
 const HiddenSelect = styled.select`
     opacity: 0;
@@ -55,12 +66,6 @@ const StyledOptions = styled.ul`
     margin: 0;
     padding: 0;
 `;
-
-interface Props {
-    items: string[];
-    label?: string;
-    onChange?: (item: string, index: number) => void;
-}
 
 const Select: FC<Props> = ({ children, label, onChange, items }) => {
     const [on, toggle] = useState(false);
@@ -118,13 +123,13 @@ const Select: FC<Props> = ({ children, label, onChange, items }) => {
                 <div ref={ref}>
                     <StyledOptions onClick={() => toggle(false)}>
                         {items.map((item, i) => (
-                            <Item
+                            <SelectItem
                                 key={i}
-                                label={item}
+                                label={item.label}
                                 value={i}
                                 index={index}
                                 onClick={() => {
-                                    setTitle(item);
+                                    setTitle(item.label);
                                     setIndex(i);
                                 }}
                             />

@@ -7,6 +7,10 @@ export default {
 };
 
 export const normal = () => {
-    const [items, setItems] = React.useState(['item 1', 'item 2', 'item 3']);
+    const [items, setItems] = React.useState([
+        { id: '1', label: 'item 1' },
+        { id: '2', label: 'item 2' },
+        { id: '3', label: 'item 3' },
+    ]);
     return <Select items={items} label="My Select" />;
 };
