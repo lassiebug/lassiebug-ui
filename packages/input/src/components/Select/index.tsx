@@ -2,8 +2,6 @@ import React, {
     FC,
     useState,
     useEffect,
-    MouseEvent,
-    LiHTMLAttributes,
 } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
