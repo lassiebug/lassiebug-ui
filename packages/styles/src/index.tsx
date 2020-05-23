@@ -39,28 +39,25 @@ const Typeography = createGlobalStyle`
         color:var(--text);
     }
     h1 {
-        font-size:6rem;
-    }
-    h2 {
-        font-size:5rem;
-    }
-    h3 {
-        font-size:4rem;
-    }
-    h4 {
-        font-size:3.5rem;
-    }
-    h5 {
-        font-size:3rem;
-    }
-    h6 {
-        font-size:2.7rem;
-    }
-    h7 {
         font-size:2.5rem;
     }
+    h2 {
+        font-size:2rem;
+    }
+    h3 {
+        font-size:1.75;
+    }
+    h4 {
+        font-size:1.5rem;
+    }
+    h5 {
+        font-size:1.25rem;
+    }
+    h6 {
+        font-size:1rem;
+    }
     p {
-        font-size:1.3rem;
+        font-size:1rem;
     }
 `;
 
