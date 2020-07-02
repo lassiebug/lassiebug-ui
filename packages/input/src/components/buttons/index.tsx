@@ -1,50 +1,47 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-
 type Sizes = 'sm' | 'md' | 'lg';
 type Types = 'primary' | 'danger' | 'success' | 'warning';
 
 interface ButtonProps {
-    size:Sizes;
-    type:Types;
-    value:string;
-    flat:boolean;
+    size: Sizes;
+    type: Types;
+    value: string;
+    flat: boolean;
 }
 
-const get_color = (color?:Types) => {
-    if(!color)return 'var(--primary)';
+const get_color = (color?: Types) => {
+    if (!color) return 'var(--primary)';
     return `var(--${color})`;
-}
+};
 
 const StyledButton = styled.button`
-
-    border:${(props:ButtonProps) => {
-        if(props.flat) {
-            return `2px solid ${get_color(props.type)}`
+    border: ${(props: ButtonProps) => {
+        if (props.flat) {
+            return `2px solid ${get_color(props.type)}`;
         } else {
             return 'none';
         }
     }};
-    background-color:${(props:ButtonProps) => {
-        if(props.flat) {
+    background-color: ${(props: ButtonProps) => {
+        if (props.flat) {
             return 'none';
         } else {
             return get_color(props.type);
         }
-
     }};
 
-    padding:.5rem 1rem;
-    border-radius:5px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 
-    color:var(--black);
+    color: var(--black);
 
     cursor: pointer;
-    transition:var(--shadow-transition), transform .2s;
+    transition: var(--shadow-transition), transform 0.2s;
 
-    ${(props:ButtonProps) => {
-        if(props.flat)return 'none';
+    ${(props: ButtonProps) => {
+        if (props.flat) return 'none';
         return `
             box-shadow:var(--shadow-00);
             &:hover {
@@ -57,16 +54,13 @@ const StyledButton = styled.button`
             }
         `;
     }};
-
 `;
 
-const Button:FC<ButtonProps> = (props) => {
-    return (
-        <StyledButton {...props}>
-            { props.value }
-            { props.children }
-        </StyledButton>
-    )
-}
+const Button: FC<ButtonProps> = ({ props }: any) => (
+    <StyledButton {...props}>
+        {props.value}
+        {props.children}
+    </StyledButton>
+);
 
 export default Button;
