@@ -33,7 +33,7 @@ const Colors = createGlobalStyle`
 `;
 
 const Typeography = createGlobalStyle`
-    h1, h2, h3, h4, h5, h6, h7, p, label, button {
+    h1, h2, h3, h4, h5, h6, h7, p, a, li, div, input, label, button {
         margin:0;
         font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
         color:var(--text);
