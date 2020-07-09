@@ -1,6 +1,7 @@
 {
     "name": "root",
     "private": true,
+    "license" : "MIT",
     "devDependencies": {
         "@types/jest": "^25.2.3",
         "@typescript-eslint/eslint-plugin": "^2.31.0",
