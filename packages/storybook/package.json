@@ -1,9 +1,9 @@
 {
     "name": "@lassiebug/storybook",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "description": "",
     "main": "index.js",
-    "license":"MIT",
+    "license": "MIT",
     "private": false,
     "devDependencies": {
         "@babel/core": "^7.10.4",
@@ -15,10 +15,10 @@
     },
     "gitHead": "a5f470b3f8af703f74e3c8297a5ad2984df1ef2f",
     "dependencies": {
-        "@lassiebug/card": "^0.5.0",
-        "@lassiebug/input": "^0.5.3",
-        "@lassiebug/styles": "^0.5.3",
-        "@lassiebug/ui-providers": "^0.5.0",
+        "@lassiebug/card": "^0.5.4",
+        "@lassiebug/input": "^0.5.4",
+        "@lassiebug/styles": "^0.5.4",
+        "@lassiebug/ui-providers": "^0.5.4",
         "@storybook/addons": "^5.3.19",
         "@storybook/theming": "^5.3.19"
     }
