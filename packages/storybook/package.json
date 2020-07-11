@@ -15,6 +15,7 @@
     },
     "gitHead": "a5f470b3f8af703f74e3c8297a5ad2984df1ef2f",
     "dependencies": {
+        "@lassiebug/header":"^0.5.4",
         "@lassiebug/card": "^0.5.4",
         "@lassiebug/input": "^0.5.4",
         "@lassiebug/styles": "^0.5.4",
