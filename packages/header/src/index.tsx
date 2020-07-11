@@ -8,13 +8,20 @@ const HeaderStyles = styled.header`
 
     background-color: var(--content);
     min-height: 40px;
+
     h3 {
         padding: 0 var(--padding-10);
     }
 
+    .__render-prop {
+        padding: var(--padding-10);
+    }
+
     .__items {
         display: flex;
-        height: 40px;
+        min-height: 40px;
+
+        align-items: center;
     }
 `;
 
@@ -34,25 +41,33 @@ const HeaderItemStyles = styled.div`
     }
 `;
 
-interface HeaderFC<t> extends FC<t> {
-    Item: FC<HeaderItemProps>;
+interface HeaderItemProps {
+    active?: boolean;
 }
 
 interface HeaderProps {
     title?: string;
-    Item: () => any;
+    left?(): JSX.Element;
+    right?(): JSX.Element;
 }
 
-const Header: HeaderFC<HeaderProps> = ({ title, children }) => (
+interface HeaderFC<t> extends FC<t> {
+    Item: FC<HeaderItemProps>;
+}
+
+const Header: HeaderFC<HeaderProps> = ({ title, left, right, children }) => (
     <HeaderStyles>
-        <h3>{title}</h3>
-        {children && <div className="__items">{children}</div>}
+        <div className="__items">
+            {left && <div className="__render-prop">{left()}</div>}
+            <h3>{title}</h3>
+        </div>
+        <div className="__items">
+            {children}
+{right && <div className="__render-prop">{right()}</div>}
+        </div>
     </HeaderStyles>
 );
 
-interface HeaderItemProps {
-    active?: boolean;
-}
 const HeaderItem: FC<HeaderItemProps> = ({ children, active }) => (
     <HeaderItemStyles className={active ? '__active' : ''}>
         {children}
