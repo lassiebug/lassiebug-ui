@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@lassiebug/card';
-import { Button } from '@lassiebug/ui-input';
+import { Button } from '@lassiebug/input';
 
 export default {
     title: '@lassiebug/card/Card',
