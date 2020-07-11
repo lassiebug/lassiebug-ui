@@ -1,6 +1,6 @@
 {
   "name": "@lassiebug/card",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "private": false,
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
