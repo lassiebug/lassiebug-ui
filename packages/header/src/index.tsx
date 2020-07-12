@@ -63,7 +63,7 @@ const Header: HeaderFC<HeaderProps> = ({ title, left, right, children }) => (
         </div>
         <div className="__items">
             {children}
-{right && <div className="__render-prop">{right()}</div>}
+            {right && <div className="__render-prop">{right()}</div>}
         </div>
     </HeaderStyles>
 );
