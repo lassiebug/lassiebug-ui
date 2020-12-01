@@ -1,9 +1,9 @@
-import React, { FC, ReactHTML } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 interface CardProps {
-    header?: () => ReactHTML;
-    footer?: () => ReactHTML;
+    header?: () => JSX.Element;
+    footer?: () => JSX.Element;
     width?: string;
     height?: string;
     img?: string;
